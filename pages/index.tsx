@@ -166,31 +166,32 @@ const Home: NextPage = () => {
         <p className="max-w-xl text-lg pb-6 text-left leading-snug">
           The best example of{" "}
           <span className="underline">incremental auth</span> is a Web3
-          community site. Imagine every NFT has its own community site and only
-          token holders can access their respective community site and content.
-          It would be impossible to check if a user has access to every
-          NFT-based community on the site at once, so instead we want to check
-          token ownership <span className="italic">incrementally</span>
+          community site. Imagine every NFT has an exclusive community site.
+          Only token holders can access their NFTs{"'"} respective communities
+          and content. With an infinite number of possible NFT-based
+          communities, it would be impossible to check if a user has access to
+          every community on the site at once; instead, we want to check token
+          ownership <span className="italic">incrementally</span>.
           <br />
           <br />
-          Picket <span className="underline">incremental auth</span> makes it
-          simple to manage access across different token gated communities and
-          content. With Picket{" "}
-          <span className="underline">incremental auth</span>, users login once
-          and gradually prove token ownership, or authorize, to get access to
-          different gated content.
-          <br />
+          Picket <span className="underline">incremental auth</span> managing
+          access across different token-gated communities and content simple.
+          With Picket <span className="underline">incremental auth</span>, users
+          log in once and gradually prove token ownership to access various
+          token-gated communities. <br />
           <br />
           Once users prove token ownership, they don
-          {"'"}t need to re-authorized until they logout. Picket handles the
+          {"'"}t need to be re-authorized until they log out. Picket handles the
           complexity of caching, refreshing, and validating token balances for a
-          user.
+          developers.
         </p>
 
         <h2 className="text-2xl pu-8">🏰 Example Communities</h2>
         <p className="max-w-xl text-lg py-4 pb-6 text-left leading-snug">
-          Each card below represents a different token gated community. Click on
-          a community card to check if you have access.
+          Each card below represents a token gated community. Click on a
+          community card to check if you have access. If you have access, you
+          {"'"}ll see a success message and your Picket session will be updated
+          to allow you access to that community.
         </p>
         <div className="mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
           {tokens.map(({ name, image, description, contractAddress }) => (
