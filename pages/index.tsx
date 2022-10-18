@@ -53,11 +53,9 @@ const Home: NextPage = () => {
   const authorize = async (contractAddress: string) => {
     // make sure user is logged in
     if (!isAuthenticated) {
-      try {
-        await login();
-      } catch (error) {
-        return;
-      }
+      const data = await login();
+      // do nothing if user cancels login
+      if (!data) return;
     }
 
     const allowed = await isAuthorized({
