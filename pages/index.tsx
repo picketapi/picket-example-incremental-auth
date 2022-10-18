@@ -166,6 +166,9 @@ const Home: NextPage = () => {
           <span className="underline">incremental auth</span> is a Web3
           community site. Imagine every NFT has its own community site and only
           token holders can access their respective community site and content.
+          It would be impossible to check if a user has access to every
+          NFT-based community on the site at once, so instead we want to check
+          token ownership <span className="italic">incrementally</span>
           <br />
           <br />
           Picket <span className="underline">incremental auth</span> makes it
@@ -173,11 +176,20 @@ const Home: NextPage = () => {
           content. With Picket{" "}
           <span className="underline">incremental auth</span>, users login once
           and gradually prove token ownership, or authorize, to get access to
-          different gated content. Once users prove token ownership, they don
-          {"'"}t need to re-authorized until they logout.
+          different gated content.
+          <br />
+          <br />
+          Once users prove token ownership, they don
+          {"'"}t need to re-authorized until they logout. Picket handles the
+          complexity of caching, refreshing, and validating token balances for a
+          user.
         </p>
 
         <h2 className="text-2xl pu-8">🏰 Example Communities</h2>
+        <p className="max-w-xl text-lg py-4 pb-6 text-left leading-snug">
+          Each card below represents a different token gated community. Click on
+          a community card to check if you have access.
+        </p>
         <div className="mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
           {tokens.map(({ name, image, description, contractAddress }) => (
             <button
