@@ -53,7 +53,11 @@ const Home: NextPage = () => {
   const authorize = async (contractAddress: string) => {
     // make sure user is logged in
     if (!isAuthenticated) {
-      await login();
+      try {
+        await login();
+      } catch (error) {
+        return;
+      }
     }
 
     const allowed = await isAuthorized({
