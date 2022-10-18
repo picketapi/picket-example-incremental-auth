@@ -170,8 +170,8 @@ const Home: NextPage = () => {
           Only token holders can access their NFTs{"'"} respective communities
           and content. With an infinite number of possible NFT-based
           communities, it would be impossible to check if a user has access to
-          every community on the site at once; instead, we want to check token
-          ownership <span className="italic">incrementally</span>.
+          every community on the site at once; instead, we want to verify a user
+          {"'"}s token ownership <span className="italic">incrementally</span>.
           <br />
           <br />
           Picket <span className="underline">incremental auth</span> managing
