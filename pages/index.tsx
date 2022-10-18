@@ -122,6 +122,8 @@ const Home: NextPage = () => {
           name="twitter:image"
           content="https://incremental-auth-demo.picketapi.com/social.png"
         />
+        <link rel="preconnect" href="https://rsms.me/" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       {user ? (
         <div className="text-base z-10 fixed top-0 right-2 py-4 flex items-center space-x-4">
@@ -146,7 +148,7 @@ const Home: NextPage = () => {
         </div>
       )}
 
-      <main className="py-8 text-left flex flex-col justify-start items-center mx-8 lg:mx-auto">
+      <main className="py-8 text-left flex flex-col justify-start items-start sm:items-center mx-8 lg:mx-auto">
         <div className="pt-10 lg:pt-0 text-6xl">🔐</div>
         <h1 className="text-4xl pb-8 pt-4">
           Welcome to the{" "}
