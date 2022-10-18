@@ -123,6 +123,28 @@ const Home: NextPage = () => {
           content="https://incremental-auth-demo.picketapi.com/social.png"
         />
       </Head>
+      {user ? (
+        <div className="text-base z-10 fixed top-0 right-2 py-4 flex items-center space-x-4">
+          <div className="bg-gray-300 rounded-xl px-3 py-2">
+            {displayAddress(user.displayAddress)}
+          </div>
+          <button
+            className="px-3 py-2 bg-picket-purple text-white rounded-xl"
+            onClick={() => logout()}
+          >
+            Logout to Switch Wallets
+          </button>
+        </div>
+      ) : (
+        <div className="text-base z-10 fixed top-0 right-2 py-4 flex items-center space-x-4">
+          <button
+            onClick={() => login()}
+            className="bg-picket-purple text-white rounded-xl px-3 py-2"
+          >
+            Login With Your Wallet
+          </button>
+        </div>
+      )}
 
       <main className="py-8 text-left flex flex-col justify-start items-center mx-8 lg:mx-auto">
         <div className="pt-10 lg:pt-0 text-6xl">🔐</div>
@@ -154,29 +176,6 @@ const Home: NextPage = () => {
           different gated content. Once users prove token ownership, they don
           {"'"}t need to re-authorized until they logout.
         </p>
-
-        {user ? (
-          <div className="text-base z-10 fixed top-0 right-2 py-4 flex items-center space-x-4">
-            <div className="bg-gray-300 rounded-xl px-3 py-2">
-              {displayAddress(user.displayAddress)}
-            </div>
-            <button
-              className="px-3 py-2 bg-picket-purple text-white rounded-xl"
-              onClick={() => logout()}
-            >
-              Logout to Switch Wallets
-            </button>
-          </div>
-        ) : (
-          <div className="text-base z-10 fixed top-0 right-2 py-4 flex items-center space-x-4">
-            <button
-              onClick={() => login()}
-              className="bg-picket-purple text-white rounded-xl px-3 py-2"
-            >
-              Login With Your Wallet
-            </button>
-          </div>
-        )}
 
         <h2 className="text-2xl pu-8">🏰 Example Communities</h2>
         <div className="mx-auto mt-12 grid max-w-md gap-8 px-4 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
