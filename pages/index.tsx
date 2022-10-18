@@ -177,7 +177,7 @@ const Home: NextPage = () => {
           Picket <span className="underline">incremental auth</span> managing
           access across different token-gated communities and content simple.
           With Picket <span className="underline">incremental auth</span>, users
-          log in once and gradually prove token ownership to access various
+          log in once and incrementally prove token ownership to access various
           token-gated communities. <br />
           <br />
           Once users prove token ownership, they don
