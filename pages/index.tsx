@@ -160,10 +160,10 @@ const Home: NextPage = () => {
           </span>{" "}
           Example
         </h1>
-        <h2 className="text-2xl pb-4 text-gray-700">
+        <h2 className="text-2xl mb-6 text-gray-700">
           💭 What is Incremental Auth?
         </h2>
-        <p className="max-w-xl text-lg pb-6 text-left leading-snug">
+        <p className="max-w-xl text-lg text-left leading-snug">
           The best example of{" "}
           <span className="underline">incremental auth</span> is a Web3
           community site. Imagine every NFT has an exclusive community site.
@@ -177,7 +177,7 @@ const Home: NextPage = () => {
           Picket <span className="underline">incremental auth</span> managing
           access across different token-gated communities and content simple.
           With Picket <span className="underline">incremental auth</span>, users
-          log in once and incrementally prove token ownership to access various
+          log in once and gradually prove token ownership to access various
           token-gated communities. <br />
           <br />
           Once users prove token ownership, they don
@@ -186,8 +186,8 @@ const Home: NextPage = () => {
           developers.
         </p>
 
-        <h2 className="text-2xl pu-8">🏰 Example Communities</h2>
-        <p className="max-w-xl text-lg py-4 pb-6 text-left leading-snug">
+        <h2 className="text-2xl my-6">🏰 Example Communities</h2>
+        <p className="max-w-xl text-lg text-left leading-snug">
           Each card below represents a token gated community. Click on a
           community card to check if you have access. If you have access, you
           {"'"}ll see a success message and your Picket session will be updated
