@@ -1,5 +1,14 @@
 # Picket Incremental Auth Demo
 
+View the live demo at https://incremental-auth-demo.picketapi.com/
+
+## What is Incremental Auth?
+
+The best example of incremental auth is a Web3 community site. Imagine every NFT has an exclusive community site. Only token holders can access their NFTs' respective communities and content. With an infinite number of possible NFT-based communities, it would be impossible to check if a user has access to every community on the site at once; instead, we want to verify a user's token ownership incrementally.
+
+You can read more about incremental auth in the [Picket docs](https://docs.picketapi.com/picket-docs/reference/concepts/incremental-auth).
+
+
 ## Getting Started
 
 ### 1. Clone the Repo
