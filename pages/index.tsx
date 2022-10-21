@@ -85,22 +85,28 @@ const Home: NextPage = () => {
   return (
     <div className="min-h-screen bg-purple-50 text-[#3A3A3A]">
       <Head>
-        <title>Incremental Auth | Picket API</title>
+        <title>Incremental Authorization | Picket API</title>
         <meta
           name="description"
-          content="Incremental Auth with Picket API Example"
+          content="Incremental Authorization with Picket API Example"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
 
         {/* Social metadata */}
-        <meta property="og:title" content="Incremental Auth | Picket API" />
+        <meta
+          property="og:title"
+          content="Incremental Authorization | Picket API"
+        />
         <meta
           property="og:description"
-          content="Incremental Auth Demo with Picket API"
+          content="Incremental Authorization Demo with Picket API"
         />
-        <meta property="og:site_name" content="Incremental Auth | Picket" />
+        <meta
+          property="og:site_name"
+          content="Incremental Authorization | Picket"
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
@@ -114,7 +120,7 @@ const Home: NextPage = () => {
         <meta property="og:image:type" content="image/png" />
         <meta
           property="og:image:alt"
-          content="Incremental Auth Demo with Picket API"
+          content="Incremental Authorization Demo with Picket API"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -156,16 +162,16 @@ const Home: NextPage = () => {
             <a className="text-picket-purple" href="https://picketapi.com">
               Picket
             </a>{" "}
-            Incremental Auth
+            Incremental Authorization
           </span>{" "}
           Example
         </h1>
         <h2 className="text-2xl mb-6 text-gray-700">
-          💭 What is Incremental Auth?
+          💭 What is Incremental Authorization?
         </h2>
         <p className="max-w-xl text-lg text-left leading-snug">
           The best example of{" "}
-          <span className="underline">incremental auth</span> is a Web3
+          <span className="underline">incremental authorization</span> is a Web3
           community site. Imagine every NFT has an exclusive community site.
           Only token holders can access their NFTs{"'"} respective communities
           and content. With an infinite number of possible NFT-based
@@ -174,9 +180,12 @@ const Home: NextPage = () => {
           {"'"}s token ownership <span className="italic">incrementally</span>.
           <br />
           <br />
-          Picket <span className="underline">incremental auth</span> managing
-          access across different token-gated communities and content simple.
-          With Picket <span className="underline">incremental auth</span>, users
+          Picket <span className="underline">
+            incremental authorization
+          </span>{" "}
+          managing access across different token-gated communities and content
+          simple. With Picket{" "}
+          <span className="underline">incremental authorization</span>, users
           log in once and gradually prove token ownership to access various
           token-gated communities. <br />
           <br />
