@@ -131,32 +131,42 @@ const Home: NextPage = () => {
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
+      <div className="text-sm sm:text-base z-10 fixed top-auto bottom-0 sm:top-0 sm:bottom-auto left-2 py-4 flex items-center space-x-4">
+        <a
+          href="https://picketapi.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white border border-grey-300 rounded-xl px-5 py-2"
+        >
+          Build with Incremental Authz &rarr;
+        </a>
+      </div>
       {user ? (
-        <div className="text-base z-10 fixed top-0 right-2 py-4 flex items-center space-x-4">
-          <div className="bg-gray-300 rounded-xl px-3 py-2">
+        <div className="text-sm sm:text-base z-10 fixed bottom-12 right-auto left-2 sm:top-0 sm:bottom-auto sm:right-2 sm:left-auto py-4 flex items-center space-x-4">
+          <div className="bg-gray-300 rounded-xl px-5 py-2">
             {displayAddress(user.displayAddress)}
           </div>
           <button
-            className="px-3 py-2 bg-picket-purple text-white rounded-xl"
+            className="px-5 py-2 bg-picket-purple text-white rounded-xl"
             onClick={() => logout()}
           >
             Logout to Switch Wallets
           </button>
         </div>
       ) : (
-        <div className="text-base z-10 fixed top-0 right-2 py-4 flex items-center space-x-4">
+        <div className="text-sm sm:text-base z-10 fixed bottom-12 right-auto left-2 sm:top-0 sm:bottom-auto sm:right-2 sm:left-auto py-4 flex items-center space-x-4">
           <button
             onClick={() => login()}
-            className="bg-picket-purple text-white rounded-xl px-3 py-2"
+            className="bg-picket-purple text-white rounded-xl px-5 py-2"
           >
             Login With Your Wallet
           </button>
         </div>
       )}
 
-      <main className="py-8 text-left flex flex-col justify-start items-start sm:items-center mx-8 lg:mx-auto">
-        <div className="pt-10 lg:pt-0 text-6xl">🔐</div>
-        <h1 className="text-4xl pb-8 pt-4">
+      <main className="pt-8 pb-20 text-left flex flex-col justify-start items-start sm:items-center mx-8 lg:mx-auto">
+        <div className="text-4xl sm:text-6xl">🔐</div>
+        <h1 className="text-3xl sm:text-4xl pb-8 pt-4">
           Welcome to the{" "}
           <span className="text-picket-purple">
             <a className="text-picket-purple" href="https://picketapi.com">
@@ -187,12 +197,23 @@ const Home: NextPage = () => {
           simple. With Picket{" "}
           <span className="underline">incremental authorization</span>, users
           log in once and gradually prove token ownership to access various
-          token-gated communities. <br />
+          token-gated communities.
+          <br />
           <br />
           Once users prove token ownership, they don
           {"'"}t need to be re-authorized until they log out. Picket handles the
           complexity of caching, refreshing, and validating token balances for a
           developers.
+          <br />
+          <br />
+          <a
+            href="https://docs.picketapi.com/picket-docs/reference/concepts/incremental-authorization"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-picket-purple underline"
+          >
+            Learn more &rarr;
+          </a>
         </p>
 
         <h2 className="text-2xl my-6">🏰 Example Communities</h2>
