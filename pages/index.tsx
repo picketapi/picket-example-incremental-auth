@@ -136,9 +136,10 @@ const Home: NextPage = () => {
           href="https://picketapi.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white border border-grey-300 rounded-xl px-5 py-2"
+          className="bg-white border border-grey-300 rounded-xl px-5 py-2 flex items-center space-x-4"
         >
-          Build with Incremental Authz &rarr;
+          <img src="/favicon.ico" alt="Picket API" className="h-5" />
+          <span>Build with Incremental Authz &rarr;</span>
         </a>
       </div>
       {user ? (
