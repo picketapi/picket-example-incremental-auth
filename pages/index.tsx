@@ -131,43 +131,43 @@ const Home: NextPage = () => {
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
-      <div className="text-sm sm:text-base z-10 fixed top-auto bottom-0 sm:top-0 sm:bottom-auto left-2 py-4 flex items-center space-x-4">
+      <div className="fixed top-auto bottom-0 left-2 z-10 flex items-center space-x-4 py-4 text-sm sm:top-0 sm:bottom-auto sm:text-base">
         <a
           href="https://picketapi.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white border border-grey-300 rounded-xl px-5 py-2 flex items-center space-x-4"
+          className="border-grey-300 flex items-center space-x-4 rounded-xl border bg-white px-5 py-2"
         >
           <img src="/favicon.ico" alt="Picket API" className="h-5" />
           <span>Build with Incremental Authz &rarr;</span>
         </a>
       </div>
       {user ? (
-        <div className="text-sm sm:text-base z-10 fixed bottom-12 right-auto left-2 sm:top-0 sm:bottom-auto sm:right-2 sm:left-auto py-4 flex items-center space-x-4">
-          <div className="bg-gray-300 rounded-xl px-5 py-2">
+        <div className="fixed bottom-12 right-auto left-2 z-10 flex items-center space-x-4 py-4 text-sm sm:top-0 sm:bottom-auto sm:right-2 sm:left-auto sm:text-base">
+          <div className="rounded-xl bg-gray-300 px-5 py-2">
             {displayAddress(user.displayAddress)}
           </div>
           <button
-            className="px-5 py-2 bg-picket-purple text-white rounded-xl"
+            className="rounded-xl bg-picket-purple px-5 py-2 text-white"
             onClick={() => logout()}
           >
             Logout to Switch Wallets
           </button>
         </div>
       ) : (
-        <div className="text-sm sm:text-base z-10 fixed bottom-12 right-auto left-2 sm:top-0 sm:bottom-auto sm:right-2 sm:left-auto py-4 flex items-center space-x-4">
+        <div className="fixed bottom-12 right-auto left-2 z-10 flex items-center space-x-4 py-4 text-sm sm:top-0 sm:bottom-auto sm:right-2 sm:left-auto sm:text-base">
           <button
             onClick={() => login()}
-            className="bg-picket-purple text-white rounded-xl px-5 py-2"
+            className="rounded-xl bg-picket-purple px-5 py-2 text-white"
           >
             Login With Your Wallet
           </button>
         </div>
       )}
 
-      <main className="pt-8 pb-20 text-left flex flex-col justify-start items-start sm:items-center mx-8 lg:mx-auto">
+      <main className="mx-8 flex flex-col items-start justify-start pt-8 pb-20 text-left sm:items-center lg:mx-auto">
         <div className="text-4xl sm:text-6xl">🔐</div>
-        <h1 className="text-3xl sm:text-4xl pb-8 pt-4">
+        <h1 className="pb-8 pt-4 text-3xl sm:text-4xl">
           Welcome to the{" "}
           <span className="text-picket-purple">
             <a className="text-picket-purple" href="https://picketapi.com">
@@ -177,10 +177,10 @@ const Home: NextPage = () => {
           </span>{" "}
           Example
         </h1>
-        <h2 className="text-2xl mb-6 text-gray-700">
+        <h2 className="mb-6 text-2xl text-gray-700">
           💭 What is Incremental Authorization?
         </h2>
-        <p className="max-w-xl text-lg text-left leading-snug">
+        <p className="max-w-xl text-left text-lg leading-snug">
           The best example of{" "}
           <span className="underline">incremental authorization</span> is a Web3
           community site. Imagine every NFT has an exclusive community site.
@@ -217,8 +217,8 @@ const Home: NextPage = () => {
           </a>
         </p>
 
-        <h2 className="text-2xl my-6">🏰 Example Communities</h2>
-        <p className="max-w-xl text-lg text-left leading-snug">
+        <h2 className="my-6 text-2xl">🏰 Example Communities</h2>
+        <p className="max-w-xl text-left text-lg leading-snug">
           Each card below represents a token gated community. Click on a
           community card to check if you have access. If you have access, you
           {"'"}ll see a success message and your Picket session will be updated
@@ -231,8 +231,8 @@ const Home: NextPage = () => {
               onClick={() => authorize(contractAddress)}
               className="relative"
             >
-              <div className="flex flex-col overflow-hidden rounded-2xl shadow-lg text-left">
-                <div className="flex-shrink-0 relative ">
+              <div className="flex flex-col overflow-hidden rounded-2xl text-left shadow-lg">
+                <div className="relative flex-shrink-0 ">
                   <img
                     className="h-48 w-full object-cover"
                     src={image}
